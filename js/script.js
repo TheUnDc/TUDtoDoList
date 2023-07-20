@@ -1,14 +1,24 @@
 {
     const tasks = [
-        {
-            content: "zadanie1",
-            done: false,
-        },
-        {
-            content: "zadanie2",
-            done: true,
-        },
+        
     ];
+
+    const addTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+        });
+        render();
+    };
+
+    const removeTask = (index) => {
+        tasks.splice(index, 1);
+        render();
+    };
+
+    const toggleTaskDone = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
+    };
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove")
@@ -26,23 +36,6 @@
                 toggleTaskDone(index)
             });
         })
-    };
-
-    const addTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
-        render();
-    };
-
-    const removeTask = (index) => {
-        tasks.splice(index, 1);
-        render();
-    };
-
-    const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
-        render();
     };
 
     const onFormSubmit = (event) => {
