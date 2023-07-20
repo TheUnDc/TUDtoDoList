@@ -14,15 +14,18 @@
     <title>Lista zadań</title>
 </head>
     
-<body>
-    <section>
+<body class="body__container">
+    <h1>Lista zadań</h1>
+    <section class="container__section">
+        <caption class="container__header">Dodaj nowe zadanie</caption>
         <form class="js-form">
-            <input class="js-addTask">
+            <input autofocus class="js-addTask">
             <button>Dodaj zadanie</button>
         </form>
     </section>
 
-    <section>
+    <section class="container__section">
+        <caption class="container__header">Lista zadań</caption>
         <ul class="js-tasks"></ul>
     </section> 
 </body>
