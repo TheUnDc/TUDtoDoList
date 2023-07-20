@@ -15,7 +15,7 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li>
+                <li ${task.done ? "class='task__done' ":""}>
                     ${task.content}
                 </li>
             `;
