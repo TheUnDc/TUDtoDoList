@@ -8,7 +8,12 @@ html {
 
 .body__container {
     max-width: 1000px;
+    margin:100px 400px;
+    background-color: #ededed;
+}
 
+.main__container {
+    margin: auto;
 }
 
 .task__done {

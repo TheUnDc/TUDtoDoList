@@ -10,24 +10,27 @@
     <!-- <meta property="og:image" content=""> -->
     <!-- <link rel="icon" href=""> -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
     <title>Lista zadań</title>
 </head>
 
 <body class="body__container">
-    <main class="body__container">
+    <main class="main__container">
         <h1>Lista zadań</h1>
         <section class="container__section">
-            <label class="container__header">Dodaj nowe zadanie</label>
-            <form class="js-form">
-                <input autofocus class="js-addTask">
-                <button class="js-button">Dodaj zadanie</button>
+            <h2 class="container__header">Dodaj nowe zadanie</h2>
+            <div class="container__content">
+                <form class="js-form">
+                    <input autofocus class="js-addTask">
+                    <button class="js-button">Dodaj zadanie</button>
 
-            </form>
+                </form>
+            </div>
         </section>
 
         <section class="container__section">
-            <caption class="container__header">Lista zadań</caption>
+            <h2 class="container__header">Lista zadań</h2>
             <ul class="js-tasks"></ul>
         </section>
     </main>

@@ -1,0 +1,17 @@
+.container__section{
+    border-bottom: 10px solid #ededed;
+    background-color: white;
+    margin: 10px 0;
+}
+
+.container__header {
+    border-bottom: 2px solid #ededed;
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+}
+
+.container__content {
+    margin: 0;
+    padding: 20px;
+}
