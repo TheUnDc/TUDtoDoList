@@ -8,10 +8,14 @@
     border-bottom: 2px solid #ededed;
     font-size: 20px;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
 }
 
 .container__content {
     margin: 0;
     padding: 20px;
+}
+
+.tasks {
+    padding: 10px;
 }
