@@ -21,6 +21,33 @@ html {
     text-decoration: line-through;
 }
 
+.task__button {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    justify-self: center;
+}
+
+.task__button--checkMark {
+    some style
+}
+
+.task__button--deleteMark {
+    some style
+}
+
 .przyladowycss {
     word-break: break-word;
 }
+
+.task__rendered {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
+    list-style: none;
+    word-break: break-word;
+
+}
+
+
+/* mediaquerry 1150px */
