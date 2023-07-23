@@ -21,23 +21,18 @@ html {
     text-decoration: line-through;
 }
 
-.task__button {
+.task__checkButton {
     cursor: pointer;
     height: 30px;
     width: 30px;
     justify-self: center;
+    color:white;
+    border: none;
+    background-color: green;
 }
 
-.task__button--checkMark {
-    some style
-}
-
-.task__button--deleteMark {
-    some style
-}
-
-.przyladowycss {
-    word-break: break-word;
+.task__checkButton--deleteMark {
+    background-color: crimson;
 }
 
 .task__rendered {
@@ -46,6 +41,8 @@ html {
     grid-template-columns: 1fr 10fr 1fr;
     list-style: none;
     word-break: break-word;
+    padding: 20px;
+    border-bottom: 1px solid #ededed;
 
 }
 
