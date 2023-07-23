@@ -21,10 +21,15 @@
     border: 2px solid #007382;
     background-color: #007382;
     color: white;
+    cursor:pointer;
+}
+
+.container__button:hover {
+     background-color: #1a4d54;
 }
 
 .container__button:active {
-    transform: scale(0.98);
+    transform: scale(0.94);
     box-shadow: 3px 2px 50px -16px #1a4d54;
     background-color: #1a4d54;
 }
