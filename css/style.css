@@ -31,8 +31,28 @@ html {
     background-color: green;
 }
 
+.task__checkButton:hover {
+    background-color: #2d5d2d;
+}
+
+.task__checkButton:active {
+    transform: scale(0.94);
+    box-shadow: 3px 2px 50px -16px #2d5d2d;
+    background-color: #2d5d2d;
+}
+
 .task__checkButton--deleteMark {
     background-color: crimson;
+}
+
+.task__checkButton--deleteMark:hover {
+    background-color: #a01934;
+}
+
+.task__checkButton--deleteMark:active {
+    transform: scale(0.94);
+    box-shadow: 3px 2px 50px -16px #a01934;
+    background-color: #a01934;
 }
 
 .task__rendered {
