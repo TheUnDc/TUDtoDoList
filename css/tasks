@@ -1,0 +1,48 @@
+.task__done {
+    text-decoration: line-through;
+}
+
+.task__checkButton {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    justify-self: center;
+    color:white;
+    border: none;
+    background-color: green;
+}
+
+.task__checkButton:hover {
+    background-color: #2d5d2d;
+}
+
+.task__checkButton:active {
+    transform: scale(0.94);
+    box-shadow: 3px 2px 50px -16px #2d5d2d;
+    background-color: #2d5d2d;
+}
+
+.task__checkButton--deleteMark {
+    background-color: crimson;
+}
+
+.task__checkButton--deleteMark:hover {
+    background-color: #a01934;
+}
+
+.task__checkButton--deleteMark:active {
+    transform: scale(0.94);
+    box-shadow: 3px 2px 50px -16px #a01934;
+    background-color: #a01934;
+}
+
+.task__rendered {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
+    list-style: none;
+    word-break: break-word;
+    padding: 20px;
+    border-bottom: 1px solid #ededed;
+
+}

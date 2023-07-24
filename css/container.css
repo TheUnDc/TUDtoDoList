@@ -41,7 +41,6 @@
 }
 
 .tasks {
-    margin: 0;
     padding: 10px;
 }
 
@@ -49,3 +48,8 @@
     display:flex;
     justify-content: space-between;
 }
+
+@media (max-width: 1150px) {
+
+    
+};
