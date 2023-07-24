@@ -82,7 +82,7 @@
 
         task.innerHTML = htmlString; 
         bindEvents();
-        
+
     };
 
     const init = () => {
