@@ -66,8 +66,8 @@
             `;
         }
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-
+        document.querySelector(".js-tasks").innerHTML = htmlString; 
+        // TODO: add const to js-task
         bindEvents();
     };
 
