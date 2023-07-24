@@ -60,7 +60,7 @@
             htmlString += `
                 <li class="task__rendered">
                     <button class="js-done task__checkButton">${task.done ? "✔" : ""}</button>
-                    <span ${task.done ? "class='task__done '" : ""}>${task.content}</span>
+                    <span ${task.done ? "class='task__done'" : ""}>${task.content}</span>
                     <button class="js-remove task__checkButton task__checkButton--deleteMark">🗑</button>
                 </li>
             `;

@@ -16,3 +16,10 @@ html {
 .main__container {
     margin: auto;
 }
+
+@media (max-width: 1200px) {
+    
+    .body__container {
+        margin: 40px 140px;
+    }
+};

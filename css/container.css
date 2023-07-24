@@ -18,6 +18,7 @@
 
 .container__button {
     padding: 10px;
+    margin: 4px 0px;
     border: 2px solid #007382;
     background-color: #007382;
     color: white;
@@ -36,6 +37,7 @@
 
 .container__input {
     padding: 10px;
+    margin: 4px;
     min-width: 80%;
     border: 2px solid #ededed;
 }
@@ -49,7 +51,18 @@
     justify-content: space-between;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 775px) {
+    .form {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
+    .body__container {
+        margin: 5px 35px;
+    }
     
+    .task__rendered {
+        text-align: center;
+    }
 };
