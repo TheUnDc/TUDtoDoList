@@ -55,6 +55,7 @@
 
     const render = () => {
         let htmlString = "";
+        const task = document.querySelector(".js-tasks");
 
         for (const task of tasks) {
             htmlString += `
@@ -66,8 +67,7 @@
             `;
         }
 
-        document.querySelector(".js-tasks").innerHTML = htmlString; 
-        // TODO: add const to js-task
+        task.innerHTML = htmlString; 
         bindEvents();
     };
 
