@@ -2,6 +2,10 @@
     text-decoration: line-through;
 }
 
+.tasks {
+    padding: 10px;
+}
+
 .task__checkButton {
     cursor: pointer;
     height: 30px;

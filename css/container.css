@@ -42,15 +42,6 @@
     border: 2px solid #ededed;
 }
 
-.tasks {
-    padding: 10px;
-}
-
-.form {
-    display:flex;
-    justify-content: space-between;
-}
-
 @media (max-width: 775px) {
     .form {
         display:flex;

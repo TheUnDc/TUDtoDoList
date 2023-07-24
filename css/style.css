@@ -17,6 +17,11 @@ html {
     margin: auto;
 }
 
+.form {
+    display:flex;
+    justify-content: space-between;
+}
+
 @media (max-width: 1200px) {
     
     .body__container {
