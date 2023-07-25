@@ -23,6 +23,7 @@
     background-color: #007382;
     color: white;
     cursor:pointer;
+    white-space: nowrap;
 }
 
 .container__button:hover {
@@ -42,7 +43,7 @@
     border: 2px solid #ededed;
 }
 
-@media (max-width: 775px) {
+@media (max-width: 1000px) {
     .form {
         display:flex;
         flex-direction: column;
@@ -52,8 +53,6 @@
     .body__container {
         margin: 5px 35px;
     }
-    
-    .task__rendered {
-        text-align: center;
-    }
 };
+
+/* max-width: 775px */

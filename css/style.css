@@ -22,7 +22,7 @@ html {
     justify-content: space-between;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     
     .body__container {
         margin: 40px 140px;

@@ -6,22 +6,21 @@
     const addTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
-
         });
-        render();
 
+        render();
     };
 
     const removeTask = (index) => {
         tasks.splice(index, 1);
-        render();
 
+        render();
     };
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
-        render();
 
+        render();
     };
 
     const bindEvents = () => {
@@ -30,9 +29,7 @@
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
                 removeTask(index);
-
             });
-
         })
 
         const toggleDoneButtons = document.querySelectorAll(".js-done");
@@ -40,27 +37,22 @@
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
             toggleDoneButton.addEventListener("click", () => {
                 toggleTaskDone(index)
-
             });
-
         })
     };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-
         const rawNewTaskContent = document.querySelector(".js-addTask");
         const newTaskContent = rawNewTaskContent.value.trim();
 
         if (newTaskContent === "") {
             return;
-
         }
 
         addTask(newTaskContent);
         rawNewTaskContent.focus();
         rawNewTaskContent.value = "";
-
     };
 
     const render = () => {
@@ -73,24 +65,18 @@
                     <button class="js-done task__checkButton">${task.done ? "✔" : ""}</button>
                     <span ${task.done ? "class='task__done'" : ""}>${task.content}</span>
                     <button class="js-remove task__checkButton task__checkButton--deleteMark">🗑</button>
-
                 </li>
-
             `;
-
         };
 
         task.innerHTML = htmlString; 
         bindEvents();
-
     };
 
     const init = () => {
         render();
         const form = document.querySelector(".js-form");
-
         form.addEventListener("submit", onFormSubmit);
-
     };
 
     init()
