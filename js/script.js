@@ -3,7 +3,7 @@
 
     ];
 
-    const addTask = (newTaskContent) => {
+    const addTask = (newTaskContent) => { //immutability
         tasks.push({
             content: newTaskContent,
         });
@@ -11,14 +11,14 @@
         render();
     };
 
-    const removeTask = (index) => {
+    const removeTask = (index) => { //immutablitiy splice usuwa 
         tasks.splice(index, 1);
 
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        tasks[taskIndex].done = !tasks[taskIndex].done; //immutability 
 
         render();
     };
@@ -41,18 +41,23 @@
         })
     };
 
+    const clearTextBox = () => {
+        const rawNewTaskContent = document.querySelector(".js-addTask");
+
+        rawNewTaskContent.focus();
+        rawNewTaskContent.value = "";
+    };
+
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const rawNewTaskContent = document.querySelector(".js-addTask");
-        const newTaskContent = rawNewTaskContent.value.trim();
+        const newTaskContent = document.querySelector(".js-addTask").value.trim();
 
         if (newTaskContent === "") {
             return;
         }
 
         addTask(newTaskContent);
-        rawNewTaskContent.focus();
-        rawNewTaskContent.value = "";
+        clearTextBox();
     };
 
     const render = () => {
