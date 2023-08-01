@@ -24,10 +24,13 @@
     color: white;
     cursor:pointer;
     white-space: nowrap;
+    
 }
 
 .container__button:hover {
-     background-color: #1a4d54;
+    background-color: #1a4d54;
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .container__button:active {
