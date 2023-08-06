@@ -2,10 +2,6 @@
     text-decoration: line-through;
 }
 
-.task__rendered--hide {
-    display: none !important;
-}
-
 .tasks {
     padding: 10px;
 }
@@ -44,10 +40,6 @@
     background-color: #a01934;
 }
 
-.task__headerButtons {
-    color: blue;
-};
-
 .task__rendered {
     display: grid;
     grid-template-rows: 1fr;
@@ -58,3 +50,7 @@
     border-bottom: 1px solid #ededed;
 
 }
+
+.task__rendered--hide {
+    display: none !important;
+};
