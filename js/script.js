@@ -1,24 +1,27 @@
 {
-    const tasks = [
+    let tasks = [
 
     ];
 
-    const addTask = (newTaskContent) => { //immutability
-        tasks.push({
-            content: newTaskContent,
-        });
+    const addTask = (inputTaskContent) => { 
+        tasks = [
+            ...tasks,
+            {content: inputTaskContent, done: false},
+        ]
 
         render();
     };
 
-    const removeTask = (index) => { //immutablitiy splice usuwa 
-        tasks.splice(index, 1);
+    const removeTask = (input) => { 
+        tasks = tasks.filter((task) => task !== tasks[input]);
 
         render();
     };
 
-    const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done; //immutability 
+    const toggleTaskDone = (inputTask) => {
+
+        const tasksDoneFunction = (task, index) => index === inputTask ? { ...task, done: !task.done } : task
+        tasks = tasks.map(tasksDoneFunction);
 
         render();
     };
@@ -50,8 +53,8 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const newTaskContent = document.querySelector(".js-addTask").value.trim();
 
+        const newTaskContent = document.querySelector(".js-addTask").value.trim();
         if (newTaskContent === "") {
             return;
         }
@@ -60,9 +63,9 @@
         clearTextBox();
     };
 
-    const render = () => {
+    const renderedTask = () => {
         let htmlString = "";
-        const task = document.querySelector(".js-tasks");
+        const taskList = document.querySelector(".js-tasks");
 
         for (const task of tasks) {
             htmlString += `
@@ -74,14 +77,21 @@
             `;
         };
 
-        task.innerHTML = htmlString; 
+        taskList.innerHTML = htmlString; 
+    };
+
+    const render = () => {
+        renderedTask();
+
         bindEvents();
+        console.log(tasks);
     };
 
     const init = () => {
         render();
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
+        
     };
 
     init()
