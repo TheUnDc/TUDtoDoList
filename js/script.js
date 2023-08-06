@@ -19,7 +19,6 @@
     };
 
     const toggleTaskDone = (inputTask) => {
-
         const tasksDoneFunction = (task, indexInput) => indexInput === inputTask ? { ...task, done: !task.done } : task
         tasks = tasks.map(tasksDoneFunction);
 
@@ -39,32 +38,32 @@
     };
 
     const bindHeaderEventsButtons = () => {
-        const makeAllTasksDoneButton = document.querySelector(".js-makeAllDone");
-        const hideAllDoneTasksButton = document.querySelector(".js-hideDone");
+        const allTasksDoneButton = document.querySelector(".js-makeAllDone");
+        const allDoneTasksButton = document.querySelector(".js-hideDone");
     
-        if (makeAllTasksDoneButton) {
-          makeAllTasksDoneButton.addEventListener("click", makeAllTasksDone);
+        if (allTasksDoneButton) {
+          allTasksDoneButton.addEventListener("click", makeAllTasksDone);
         };
     
-        if (hideAllDoneTasksButton) {
-          hideAllDoneTasksButton.addEventListener("click", toggleHideDone);
+        if (allDoneTasksButton) {
+          allDoneTasksButton.addEventListener("click", toggleHideDone);
         };
     };
 
     const bindButtonsEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
-        removeButtons.forEach((removeButton, index) => {
+        removeButtons.forEach((removeButton, input) => {
             removeButton.addEventListener("click", () => {
-                removeTask(index);
+                removeTask(input);
             });
         })
 
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
-        toggleDoneButtons.forEach((toggleDoneButton, index) => {
+        toggleDoneButtons.forEach((toggleDoneButton, input) => {
             toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(index)
+                toggleTaskDone(input)
             });
         })
     };
