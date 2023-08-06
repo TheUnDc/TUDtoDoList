@@ -110,10 +110,10 @@
 
         if (tasks.length > 0) {
             htmlString = `
-          <button class="tasklistButtons__button js-hideDone">
+          <button class="task__headerButtons js-hideDone">
              ${hideDone ? "Pokaż" : "Ukryj"} ukończone
           </button>
-          <button class="tasklistButtons__button js-makeAllDone"
+          <button class="task__headerButtons js-makeAllDone"
           ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Ukończ wszystkie
           </button>
