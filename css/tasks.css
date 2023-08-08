@@ -56,7 +56,22 @@
 .task__headerButtons {
     border: none;
     background-color: #ffffff;
-    color: #446f78;
+    color: #3c7681;
+    cursor: pointer;
+}
+
+.task__headerButtons:hover {
+    color: #6c989b;
+}
+
+.task__headerButtons:active {
+    color: #6c989b87;
+    transform: scale(0.98);
+}
+
+.task__headerButtons:disabled {
+    color: #a9a8a8;
+    transform: scale(1);
 }
 
 .task__rendered--hide {
