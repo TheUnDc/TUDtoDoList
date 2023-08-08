@@ -11,6 +11,11 @@
     padding: 15px;
 }
 
+.container__header--flex {
+    display: flex;
+    justify-content:space-between;
+}
+
 .container__innterHeader {
     font-weight: 900;
 }
@@ -47,6 +52,7 @@
     border: 2px solid #ededed;
 }
 
+
 @media (max-width: 1000px) {
     .form {
         display:flex;
@@ -59,8 +65,6 @@
     }
 };
 
-.task__headerButtons {
-    border: none;
-}
+
 
 /* max-width: 775px */
