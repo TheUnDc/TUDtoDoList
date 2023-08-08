@@ -59,4 +59,8 @@
     }
 };
 
+.task__headerButtons {
+    border: none;
+}
+
 /* max-width: 775px */

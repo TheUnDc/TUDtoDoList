@@ -3,16 +3,16 @@
     let hideDone = false;
 
 
-    const addTask = (inputTaskContent) => { 
+    const addTask = (inputTaskContent) => {
         tasks = [
             ...tasks,
-            {content: inputTaskContent, done: false},
+            { content: inputTaskContent, done: false },
         ]
 
         render();
     };
 
-    const removeTask = (input) => { 
+    const removeTask = (input) => {
         tasks = tasks.filter((task) => task !== tasks[input]);
 
         render();
@@ -28,25 +28,25 @@
     const toggleHideDone = () => {
         hideDone = !hideDone;
         render();
-      };
-    
+    };
+
     const makeAllTasksDone = () => {
         tasks = tasks.map(
-          (task) => ({ ...task, done: true })
+            (task) => ({ ...task, done: true })
         );
         render();
     };
 
     const bindHeaderEventsButtons = () => {
-        const allTasksDoneButton = document.querySelector(".js-makeAllDone");
+        const allTasksDoneButton = document.querySelector(".js-allDone");
         const allDoneTasksButton = document.querySelector(".js-hideDone");
-    
+
         if (allTasksDoneButton) {
-          allTasksDoneButton.addEventListener("click", makeAllTasksDone);
+            allTasksDoneButton.addEventListener("click", makeAllTasksDone);
         };
-    
+
         if (allDoneTasksButton) {
-          allDoneTasksButton.addEventListener("click", toggleHideDone);
+            allDoneTasksButton.addEventListener("click", toggleHideDone);
         };
     };
 
@@ -76,7 +76,7 @@
     };
 
     const onFormSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault(); hideDone
 
         const newTaskContent = document.querySelector(".js-addTask").value.trim();
         if (newTaskContent === "") {
@@ -101,7 +101,7 @@
             `;
         };
 
-        taskList.innerHTML = htmlString; 
+        taskList.innerHTML = htmlString;
     };
 
     const renderButtons = () => {
@@ -110,11 +110,11 @@
 
         if (tasks.length > 0) {
             htmlString = `
-          <button class="task__headerButtons js-hideDone">
-             ${hideDone ? "Pokaż" : "Ukryj"} ukończone
-          </button>
-          <button class="task__headerButtons js-makeAllDone"
-          ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+            <button class="js-hideDone task__headerButtons">
+                ${hideDone ? "Pokaż" : "Ukryj"} ukończone
+            </button>
+            <button class="js-allDone task__headerButtons"
+                ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Ukończ wszystkie
           </button>
             `;
@@ -135,7 +135,7 @@
         render();
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
-        
+
     };
 
     init()
