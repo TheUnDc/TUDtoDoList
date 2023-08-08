@@ -17,6 +17,7 @@
 }
 
 .container__innterHeader {
+    text-align: left;
     font-weight: 900;
 }
 
@@ -62,6 +63,19 @@
 
     .body__container {
         margin: 5px 35px;
+    }
+
+    .container__header--flex {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .task__button {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+
     }
 };
 
