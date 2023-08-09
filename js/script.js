@@ -95,7 +95,7 @@
             htmlString += `
                 <li class ="task__rendered ${task.done && hideDone ? 'task__rendered--hide' : ''}">
                     <button class="js-done task__checkButton">${task.done ? "✔" : ""}</button>
-                    <span ${task.done ? "class='task__done'" : ""}>${task.content}</span>
+                    <span class="task__content" ${task.done ? "class='task__done'" : ""}>${task.content}</span>
                     <button class="js-remove task__checkButton task__checkButton--deleteMark">🗑</button>
                 </li>
             `;

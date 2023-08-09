@@ -8,13 +8,13 @@ html {
 
 .body__container {
     max-width: 1000px;
-    margin:100px 350px;
+    margin: auto;
     background-color: #ededed;
     font-family: 'Montserrat', sans-serif;
 }
 
 .main__container {
-    margin: auto;
+    margin: 30px auto;
 }
 
 .form {
@@ -22,10 +22,4 @@ html {
     justify-content: space-between;
 }
 
-@media (max-width: 1400px) {
-    
-    .body__container {
-        margin: 40px 140px;
-    }
-};
 

@@ -76,5 +76,8 @@
 
 .task__rendered--hide {
     display: none !important;
-};
+}
 
+.task__content {
+    padding: 0px 10px;
+}
