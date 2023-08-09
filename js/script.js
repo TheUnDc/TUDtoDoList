@@ -94,9 +94,15 @@
         for (const task of tasks) {
             htmlString += `
                 <li class ="task__rendered ${task.done && hideDone ? 'task__rendered--hide' : ''}">
-                    <button class="js-done task__checkButton">${task.done ? "✔" : ""}</button>
-                    <span class="task__content" ${task.done ? "class='task__done'" : ""}>${task.content}</span>
-                    <button class="js-remove task__checkButton task__checkButton--deleteMark">🗑</button>
+                    <button class="js-done task__checkButton">
+                        ${task.done ? "✔" : ""}
+                    </button>
+                    <span class="task__content" ${task.done ? "class='task__done'" : ""}>
+                        ${task.content}
+                    </span>
+                    <button class="js-remove task__checkButton task__checkButton--deleteMark">
+                    🗑
+                    </button>
                 </li>
             `;
         };
@@ -110,13 +116,14 @@
 
         if (tasks.length > 0) {
             htmlString = `
-            <button class="js-hideDone task__headerButtons">
-                ${hideDone ? "Pokaż" : "Ukryj"} ukończone
-            </button>
-            <button class="js-allDone task__headerButtons"
-                ${tasks.every(({ done }) => done) ? "disabled" : ""}>
-            Ukończ wszystkie
-          </button>
+                <button class="js-hideDone task__headerButtons">
+                    ${hideDone ? "Pokaż" : "Ukryj"} ukończone
+                </button>
+
+                <button class="js-allDone task__headerButtons"
+                    ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+                    Ukończ wszystkie
+                </button>
             `;
         };
 
@@ -133,9 +140,9 @@
 
     const init = () => {
         render();
+        
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
-
     };
 
     init()
